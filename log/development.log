@@ -139,3 +139,24 @@ Processing by ArticlesController#new as HTML
 Completed 200 OK in 72ms (Views: 64.0ms | ActiveRecord: 0.5ms)
 
 
+Started POST "/articles" for 108.41.251.77 at 2020-07-31 20:30:36 +0000
+Cannot render console from 108.41.251.77! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"991/yCKgxbH4skKlF0LKDHQPonXsgylz3makc/luPJBNLr8ufTYgXqInSx/TQtmGdjAhBV/JJo7gF6qWNuUNxA==", "article"=>{"title"=>"poo", "body"=>"poo"}, "commit"=>"Create Article"}
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "poo"], ["body", "poo"], ["created_at", "2020-07-31 20:30:36.217433"], ["updated_at", "2020-07-31 20:30:36.217433"]]
+  [1m[35m (14.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://174.138.35.103:49805/articles/1
+Completed 302 Found in 19ms (ActiveRecord: 15.6ms)
+
+
+Started GET "/articles/1" for 108.41.251.77 at 2020-07-31 20:30:36 +0000
+Cannot render console from 108.41.251.77! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 16ms (Views: 12.2ms | ActiveRecord: 0.5ms)
+
+
